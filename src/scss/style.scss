@@ -3,6 +3,15 @@
 );
 @use "vendors/simplebar";
 
+:root,
+[data-coreui-theme="light"] {
+  --cui-body-bg: #f5e6d0;
+  --cui-body-color: #5b4636;
+  --cui-primary: #d77f2a;
+  --cui-secondary: #c26d27;
+  --cui-tertiary-bg: #f8f1e9;
+}
+
 body {
   background-color: var(--cui-tertiary-bg);
 }

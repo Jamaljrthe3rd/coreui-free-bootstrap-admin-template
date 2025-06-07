@@ -93,6 +93,11 @@ $ npm start
 # build for production with minification
 $ npm run build
 ```
+
+### Warm color theme
+
+The default light theme uses warm beige tones. Customize the colors by editing
+`src/scss/style.scss` and rebuilding the assets.
 ## Express Server
 
 Run `npm run server` to start the Express backend. The server reads environment variables from a `.env` file and connects to MongoDB before listening on the configured port.
