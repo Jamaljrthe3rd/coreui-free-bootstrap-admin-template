@@ -21,6 +21,8 @@
   }
 
   const setTheme = theme => {
+    document.documentElement.classList.add('theme-transition')
+    window.setTimeout(() => document.documentElement.classList.remove('theme-transition'), 500)
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-coreui-theme', 'dark')
     } else {

@@ -10,10 +10,38 @@
   --cui-primary: #d77f2a;
   --cui-secondary: #c26d27;
   --cui-tertiary-bg: #f8f1e9;
+  // neon palette
+  --cui-neon-primary: #39ff14;
+  --cui-neon-secondary: #f531ff;
+  --cui-body-bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
 }
 
 body {
-  background-color: var(--cui-tertiary-bg);
+  background: var(--cui-body-bg-gradient);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.theme-transition {
+  transition: background-color .5s ease, color .5s ease;
+}
+
+.card {
+  @include transition(transform .3s, box-shadow .3s);
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0 1rem var(--cui-neon-primary);
+  }
+}
+
+.btn {
+  @include transition(background-color .3s, box-shadow .3s);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0.5rem var(--cui-neon-secondary);
+  }
 }
 
 .wrapper {
