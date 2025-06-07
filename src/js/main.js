@@ -15,6 +15,11 @@ Chart.defaults.plugins.tooltip.position = 'nearest'
 Chart.defaults.plugins.tooltip.external = coreui.ChartJS.customTooltips
 Chart.defaults.defaultFontColor = coreui.Utils.getStyle('--cui-body-color')
 
+// zoom plugin
+if (window.ChartZoom) {
+  Chart.register(window.ChartZoom)
+}
+
 document.documentElement.addEventListener('ColorSchemeChange', () => {
   cardChart1.data.datasets[0].pointBackgroundColor = coreui.Utils.getStyle('--cui-primary')
   cardChart2.data.datasets[0].pointBackgroundColor = coreui.Utils.getStyle('--cui-info')
@@ -50,6 +55,14 @@ const cardChart1 = new Chart(document.getElementById('card-chart1'), {
     plugins: {
       legend: {
         display: false
+      }
+      ,
+      zoom: {
+        zoom: {
+          wheel: { enabled: true },
+          pinch: { enabled: true },
+          mode: 'xy'
+        }
       }
     },
     maintainAspectRatio: false,

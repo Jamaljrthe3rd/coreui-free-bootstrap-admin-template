@@ -1,7 +1,18 @@
 extends ../_layout/pages.pug
 
+block styles
+  style.
+    .login-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('assets/img/full.jpg') center/cover no-repeat fixed;
+      filter: brightness(.4);
+      z-index: -1;
+    }
+
 block view
-  .container
+  .login-page.container.d-flex.align-items-center.justify-content-center.min-vh-100
     .row.justify-content-center
       .col-lg-8
         .card-group.d-block.d-md-flex.row
