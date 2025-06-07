@@ -93,6 +93,10 @@ $ npm start
 # build for production with minification
 $ npm run build
 ```
+## Express Server
+
+Run `npm run server` to start the Express backend. The server reads environment variables from a `.env` file and connects to MongoDB before listening on the configured port.
+
 
 ## What's included
 

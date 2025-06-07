@@ -67,6 +67,7 @@
     "release-version": "node build/change-version.mjs",
     "serve": "serve dist",
     "start": "npm-run-all --sequential clean css js sync --parallel localhost watch",
+    "server": "node server.js",
     "sync": "npm-run-all --parallel sync-*",
     "sync-assets": "syncdir src/assets dist/assets",
     "sync-views": "syncdir src/views dist",
@@ -86,7 +87,14 @@
     "@coreui/icons": "^3.0.1",
     "@coreui/utils": "^2.0.2",
     "chart.js": "^4.4.7",
-    "simplebar": "^6.3.0"
+    "simplebar": "^6.3.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^5.0.0",
+    "express-session": "^2.0.0",
+    "connect-mongo": "^5.0.4",
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
